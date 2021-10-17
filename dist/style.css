@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.container {
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 29px;
+    grid-template-areas: 
+        "title title title title title"
+        "info info info info info"
+        "buttons buttons buttons buttons buttons"
+        ". . board . .";
+}
+
+#start,
+#replay {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.project-title {
+    font-size: 30px;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+    grid-area: title;
+}
+
+.buttons {
+  grid-area: buttons;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+
+.info {
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    grid-area: info;
+}
+
+#turn {
+    width: 50%;
+}
+
+.game-board {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    grid-area: board;
+    align-items: center;
+    column-gap: 30px;
+    padding-bottom: 20px;
+}
+
+.grid-user,
+.grid-cpu {
+    width: 400px;
+    height: 400px;
+    
+}
+
+.grid-user,
+.grid-cpu {
+  display: grid;
+  grid-template-rows: repeat(10, 40px);
+  grid-template-columns: repeat(10, 40px);
+}
+
+.grid-cpu .occupied {
+    background-color: white;
+}
+
+.cell {
+    background-color: white;
+    border: solid 1px grey;
+}
+
+.grid-user .carrier,
+.grid-user .battleship,
+.grid-user .cruiser,
+.grid-user .submarine,
+.grid-user .destroyer {
+    background-color: rgb(139, 139, 141);
+    border: none;
+}
+
+.miss {
+    background-color: blue;
+}
+.grid-user .hit,
+.grid-cpu .hit {
+    background-color: red;
+}
+
+.grid-cpu .hit {
+    border: none;
+}
+
+.ship-display {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+}
+
+.ship div {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(186, 186, 202);
+}
+
+.carrier-container {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+}
+
+.battleship-container {
+    width: 160px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+}
+
+.submarine-container {
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+}
+
+.cruiser-container {
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+}
+.destroyer-container {
+    width: 80px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+}
+
+.destroyer-container-vertical {
+    width: 40px;
+    height: 80px;
+    flex-wrap: wrap;
+}
+
+.cruiser-container-vertical,
+.submarine-container-vertical{
+  width: 40px;
+  height: 120px;
+  flex-wrap: wrap;
+}
+
+.battleship-container-vertical {
+  width: 40px;
+  height: 160px;
+  flex-wrap: wrap;
+}
+
+.carrier-container-vertical {
+  width: 40px;
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+.hide {
+    display: none;
+}
