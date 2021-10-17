@@ -22,7 +22,7 @@ test('Missed shot', () => {
 
     GameBoard().createGrid(grid, cellsArray);
 
-    expect(GameBoard().receiveAttack(cellsArray, 5, null)).toBe('Missed');
+    expect(GameBoard().receiveAttack(cellsArray, 5, null)).toBe('Missed!');
 })
 
 test('Succescful hits', () => {
@@ -42,9 +42,9 @@ test('Succescful hits', () => {
     grid.children[14].classList.add('battleship');
     grid.children[15].classList.add('carrier');
 
-    expect(GameBoard().receiveAttack(cellsArray, 11, shipsArray)).toBe('Succesful hit');
-    expect(GameBoard().receiveAttack(cellsArray, 12, shipsArray)).toBe('Succesful hit');
-    expect(GameBoard().receiveAttack(cellsArray, 13, shipsArray)).toBe('Succesful hit');
-    expect(GameBoard().receiveAttack(cellsArray, 14, shipsArray)).toBe('Succesful hit');
-    expect(GameBoard().receiveAttack(cellsArray, 15, shipsArray)).toBe('Succesful hit');
+    expect(GameBoard().receiveAttack(cellsArray, 11, shipsArray)).toBe('Succesful hit on destroyer!');
+    expect(GameBoard().receiveAttack(cellsArray, 12, shipsArray)).toBe('Succesful hit on submarine!');
+    expect(GameBoard().receiveAttack(cellsArray, 13, shipsArray)).toBe('Succesful hit on cruiser!');
+    expect(GameBoard().receiveAttack(cellsArray, 14, shipsArray)).toBe('Succesful hit on battleship!');
+    expect(GameBoard().receiveAttack(cellsArray, 15, shipsArray)).toBe('Succesful hit on carrier!');
 })

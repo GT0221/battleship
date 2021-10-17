@@ -10,7 +10,7 @@ function Ship(length) {
         return hitArray;
     };
   
-    const isSunk = (hitArray) => {
+    const isSunk = () => {
         if (hitArray.length == shipLength) {
             return true;
         }

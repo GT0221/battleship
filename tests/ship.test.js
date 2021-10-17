@@ -1,10 +1,10 @@
 import { test } from '@jest/globals';
 import Ship from '../src/ship';
 
+/* eslint-disable */
 test('Carrier: Test length', () => {
     let userCarrier = Ship(5);
 
-    /* eslint-disable */
     expect(userCarrier.shipLength).toBe(5);
 });
 
@@ -15,7 +15,6 @@ test('Carrier: Test not sunk', () => {
         userCarrier.hit(i);
     }
 
-    /* eslint-disable */
     expect(userCarrier.isSunk(userCarrier.hit())).toBe(false);
 });
 
