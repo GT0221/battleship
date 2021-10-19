@@ -47,20 +47,21 @@ function renderShipDisplay(gameBoard) {
     instructionDiv.classList.add('instructions');
     shipDisplayDiv.classList.add('ship-display');
 
-    h3.innerText = 'Click on ships to rotate horizontal/vertical then drag over grid.';
+    h3.innerText =
+        'Click on ships to rotate horizontal/vertical then drag over grid.';
     h3.style.color = 'white';
     h3.style.margin = '10px 10px';
 
     instructionDiv.appendChild(h3);
     shipDisplayDiv.appendChild(instructionDiv);
     const shipObj = {
-        'carrier': 5, 
-        'battleship': 4,
-        'cruiser': 3,
-        'submarine': 3,
-        'destroyer': 2
+        carrier: 5,
+        battleship: 4,
+        cruiser: 3,
+        submarine: 3,
+        destroyer: 2,
     };
-    
+
     for (const ship in shipObj) {
         const shipContainerDiv = document.createElement('div');
         shipContainerDiv.classList.add('ship');
