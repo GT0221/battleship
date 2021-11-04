@@ -7,3 +7,4 @@ about Javascript test (using jest), and how it can be of great use. Writing test
 you time and ensures that your code is behaving the way you expect it to.
 
 Link to battleShip project assignment [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/battleship)
+[Live preview](https://gt0221.github.io/battleship/)
